@@ -1,5 +1,4 @@
-*.html
-
+hey.html
 temp/
 #  /temp direct root folder only ignore temp/ it was entire project will check
-!hey.html
+*.html
