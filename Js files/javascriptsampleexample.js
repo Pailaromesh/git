@@ -265,7 +265,7 @@ console.log([...firArr,...secArr,'a','b'])
 trees.shift();
 console.log(trees);  //[ 'Mango tree' ] remove first one  
 trees.unshift(...fruits);
-console.log(trees);// [ 'Banana', 'Orange', 'Apple', 'Mango', 'Mango tree' ] add before 
+console.log(trees);// [ 'Banana', 'Orange', 'Apple', 'Mango', 'Mango tree' ] add first 
 delete trees[1] // value deletd index not changed 
 
 console.log(trees);
@@ -273,7 +273,7 @@ trees.slice(1);// fetch first one
 trees.slice(1,3);// fetch start : number 1 end : number 3  
 console.log(trees);
 trees.splice(3, 0, "Lemon", "Kiwi","grap"); //  (start:number 3,deleteCount : number 0 (right to left),..items:strig[])
-console.log(trees)
+console.log( "splice result "+trees)
 trees.toSpliced(0,1) // remove start to end single element remove 
 
 
