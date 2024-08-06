@@ -257,14 +257,14 @@ console.log([...firArr,...secArr,'a','b'])
     const trees = ["Banana Tree", "Mango tree"];
     console.log(fruits.join(',')); //Banana,Orange,Apple,Mango
     console.log(fruits.concat(trees));//[ 'Banana', 'Orange', 'Apple', 'Mango', 'Banana Tree', 'Mango tree' ]
-    trees.push("new tree"); 
+    trees.push("new tree"); // end to satart   <-------  <------  <-----  <----  <---  <-- <-
     console.log(trees);//[ 'Banana Tree', 'Mango tree', 'new tree' ]  add last
-    trees.pop();
+    trees.pop();  //end to start <- <-- <--- <---- <----- <------ <-------
     console.log(trees);//[ 'Banana Tree', 'Mango tree' ]  remove last one 
 
-trees.shift();
+trees.shift(); // start to ending -----> ----> ---> --> ->
 console.log(trees);  //[ 'Mango tree' ] remove first one  
-trees.unshift(...fruits);
+trees.unshift(...fruits);// start to end  -> --> ---> ---->  ----->
 console.log(trees);// [ 'Banana', 'Orange', 'Apple', 'Mango', 'Mango tree' ] add first 
 delete trees[1] // value deletd index not changed 
 
@@ -285,6 +285,19 @@ function showMessage_new(marks){
     const mess= marks ?? "Absent";
     console.log(mess)
 }
+
+const falsyvalues=[
+    false,
+    0,
+    -0,
+    '',
+    null,
+    undefined ,
+    NaN,
+    //on,
+   // document.all
+]
+console.log( 'falsy value '+ typeof(falsyvalues))
 
 showMessage(45)// 45
 showMessage(35)// 35 
