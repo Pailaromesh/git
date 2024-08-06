@@ -341,6 +341,66 @@ function  retrun_val(){
 }
 let val;
 retrun_val();// its getting value 7 beacse start let val;
+
+
+// find the even number and sum even number 
+
+let evenArray=[2,5,7,8,9,10,12,15,4];
+console.log(evenArray);
+let addEvennum=evenArray.filter(_=>_%2===0).reduce((a,c)=>(a*c),1);  // here 1 is intial value 
+console.log(addEvennum);
+// add first element in one veriable array previous all element move to another veriable 
+const newArray=["1",'2','3','4'];
+const [f,...rest]=newArray
+console.log(f);
+console.log(rest);
+// if need first and last only not for middle 
+const [fs,,,last]=newArray;
+console.log(fs);
+console.log(last);
+
+//without orginal modification then add new element in array 
+
+const new_array=[...newArray,...evenArray];  // created new array with 
+const new_array2=newArray.concat(...evenArray); 
+console.log(new_array)
+console.log(new_array2)
+console.log(newArray)
+console.log(evenArray)
+
+// find method this is all so callback function excuted where we are use like filter and resduce
+//but here get match single value only if existed then undefined 
+
+//resuce method
+
+const acters=[
+    'rajini',
+    'nani',
+    'praba',
+    'rana',
+    'ram',
+    'siddu',
+    'Adhi'
+];
+
+let act=acters.reduce((a,c)=>{
+var first=c[0];
+if(!a[first]){
+    a[first]=[];
+}
+a[first].push(c);
+return a;
+},{});
+console.log(act);
+console.log(acters);
+let acttesting=acters.reduce((a,c)=>{
+    console.log('-----------------------------------')
+    console.log('fst value  '+c[0])
+    console.log(" a value "+a);
+    console.log(' c value '+c);
+    },{});
+
+
  
 
 
