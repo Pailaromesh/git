@@ -269,10 +269,10 @@ console.log(trees);// [ 'Banana', 'Orange', 'Apple', 'Mango', 'Mango tree' ] add
 delete trees[1] // value deletd index not changed 
 
 console.log(trees);
-trees.slice(1);// fetch first one  
+trees.slice(1);// fetch All except first one  
 trees.slice(1,3);// fetch start : number 1 end : number 3  
 console.log(trees);
-trees.splice(3, 0, "Lemon", "Kiwi","grap"); //  (start:number 3,deleteCount : number 0 (right to left),..items:strig[])
+trees.splice(3, 0, "Lemon", "Kiwi","grap"); //  (start:number 3(insert after 3 elements ),deleteCount : number 0 (right to left),..items:strig[])
 console.log( "splice result "+trees)
 trees.toSpliced(0,1) // remove start to end single element remove 
 
@@ -413,8 +413,18 @@ let acttesting=acters.reduce((a,c)=>{
     console.log(' c value '+c);
     },{});
 
+// how to take value for number or any other 
+console.log(5+true); // 6  => here true is one bcz its converted to number 
 
- 
+console.log("5"+true ) // 5true => converted to string 
+console.log(undefined+true ) //NaN
+console.log({}+true);// [object Object]true
+
+
+console.log(-0+true);// 1
+console.log(0+true);//1
+console.log(null+true);// 1
+console.log(NaN+true);// NaN
 
 
 
