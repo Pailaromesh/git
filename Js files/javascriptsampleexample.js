@@ -426,5 +426,10 @@ console.log(0+true);//1
 console.log(null+true);// 1
 console.log(NaN+true);// NaN
 
+// Otp creation injavascript 
 
 
+function GenerateOTP(){
+    console.log( "otp "+Math.floor(Math.random()*9999)+1000) ;
+}
+GenerateOTP();
