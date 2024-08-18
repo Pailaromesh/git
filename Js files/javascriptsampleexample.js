@@ -433,3 +433,15 @@ function GenerateOTP(){
     console.log( "otp "+Math.floor(Math.random()*9999)+1000) ;
 }
 GenerateOTP();
+
+
+//higher order funcoion 
+// one function call to another function with parameter return the function called as higher order function 
+
+function add(a,b){
+    return a+b;
+}
+function HigherOderFunction(func,a,b){
+    return func(a,b);
+}
+console.log(HigherOderFunction(add,5,7)); // 12
